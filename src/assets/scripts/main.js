@@ -1,8 +1,24 @@
+import Typed from 'typed.js';
+
+
 const SELECTORS = {
   navToggle: '.header__toggle',
   nav: '#main-nav',
   navLinks: '[data-scroll]',
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  new Typed('.hero__typed', {
+    strings: [
+      "Historia, cultura y experiencias imprescindibles en la antigua capital real de Polonia.",
+      "Descubre sus plazas, castillos y barrios con vida y tradición."
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+});
 
 function addMobileNav() {
   const btn = document.querySelector(SELECTORS.navToggle);
